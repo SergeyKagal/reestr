@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PATH } from './constants/pathes';
-import { Main } from './components/Main/Main';
-import { Authorization } from './components/Authorization/Authorization';
-import { AccountSettings } from './components/AccountSettings/AccountSettings';
+import { Main } from './components/pages/Main/Main';
+import { Authorization } from './components/pages/Authorization/Authorization';
+import { AccountSettings } from './components/pages/AccountSettings/AccountSettings';
 export const App = () => {
   return (
     <BrowserRouter>

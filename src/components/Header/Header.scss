@@ -1,0 +1,115 @@
+.header {
+  background-color: aquamarine;
+  width: 100%;
+}
+.header__wrapper {
+  width: 1400px;
+  height: 80px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 115px;
+  padding-right: 115px;
+  a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.header__left-side {
+  display: flex;
+  gap: 30px;
+}
+.header__search-bar {
+  width: 270px;
+  position: relative;
+
+  &::before {
+    content: ' ';
+    background: transparent;
+    width: 18px;
+    height: 18px;
+    background-image: url('../../../public/assets/images/search-ico.svg');
+    position: absolute;
+    top: 15px;
+    left: 10px;
+  }
+  input {
+    height: 48px;
+    width: 90%;
+    border: none;
+    background-color: #f9f9fb;
+    border-radius: 5px;
+    padding: 0 10px 0 37px;
+    outline: none;
+    color: #5e5e5e;
+    font-size: 14px;
+    &::placeholder {
+      color: #c6c6c6;
+
+      font-family: 'Manrope';
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
+.header__right-side {
+  display: flex;
+}
+.tools {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-right: 20px;
+  border-right: #f9f9fb 2px solid;
+  button {
+    height: 48px;
+    width: 48px;
+    border: none;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9f9fb;
+    cursor: pointer;
+  }
+}
+.dates {
+  background-image: url('../../../public/assets/images/dates-icon.svg');
+}
+.notification {
+  background-image: url('../../../public/assets/images/bell-icon.svg');
+  position: relative;
+  p {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+    border-radius: 50%;
+    background-color: #009cb4;
+    position: absolute;
+    font-size: 12px;
+    top: -10px;
+    right: 0;
+    padding-top: 2px;
+  }
+}
+.user {
+  padding-left: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #4d4d4f;
+  button {
+    border: none;
+
+    border: none;
+    width: 32px;
+    height: 32px;
+    background: url('../../../public/assets/images/arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
