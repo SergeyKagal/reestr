@@ -14,13 +14,13 @@ export const ReestrContentHeader = () => {
       <div className="code-class">
         <span className="column-title">Код класса</span>
       </div>
-      <div className="soft's-class">
+      <div className="softs-class">
         <span className="column-title">Класс программного обеспечения</span>
       </div>
       <div className="date-registration">
         <span className="column-title">Дата регистрации</span>
       </div>
-      <div className="soft's-link">
+      <div className="softs-link">
         <span className="column-title">Адрес сайта</span>
       </div>
     </div>

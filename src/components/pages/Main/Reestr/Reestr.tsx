@@ -1,5 +1,5 @@
-import React from 'react';
 import './Reestr.scss';
+import { ReestrContent } from './ReestrContent';
 import { ReestrContentHeader } from './ReestrContentHeader';
 import { ReestrHeader } from './ReestrHeader';
 
@@ -9,6 +9,7 @@ export const Reestr = () => {
       <ReestrHeader />
       <div className="reestr__content">
         <ReestrContentHeader />
+        <ReestrContent />
       </div>
     </section>
   );
