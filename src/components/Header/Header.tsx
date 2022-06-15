@@ -6,7 +6,7 @@ import './Header.scss';
 export const Header = () => {
   return (
     <header className="header">
-      <div className="header__wrapper">
+      <div className="header__wrapper container">
         <div className="header__left-side">
           <Link className="header__link" to={PATH.MAIN}>
             <img src="./assets/images/logo.svg" alt="reestr-logo" />
@@ -26,7 +26,7 @@ export const Header = () => {
             <img src="./assets/images/user-img.png" alt="user-avatar" />
             <span className="user-name">Захар Палазник</span>
 
-            <button></button>
+            <button className="account-open-button button-32"></button>
           </div>
         </div>
       </div>

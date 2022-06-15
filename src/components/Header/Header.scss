@@ -1,18 +1,12 @@
 .header {
   background-color: aquamarine;
-  width: 100%;
 }
 .header__wrapper {
-  width: 1400px;
   height: 80px;
-  background-color: #fff;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 115px;
-  padding-right: 115px;
+
   a {
     display: flex;
     align-items: center;
@@ -101,15 +95,7 @@
   gap: 10px;
   align-items: center;
   color: #4d4d4f;
-  button {
-    border: none;
-
-    border: none;
-    width: 32px;
-    height: 32px;
-    background: url('../../../public/assets/images/arrow.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-  }
+}
+.account-open-button {
+  background: url('../../../public/assets/images/arrow.svg');
 }

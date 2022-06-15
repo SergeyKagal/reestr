@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 html {
   height: 100%;
@@ -20,4 +22,25 @@ body {
 
 #root {
   height: 100%;
+}
+.container {
+  width: 1400px;
+  padding-left: 115px;
+  padding-right: 115px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-32 {
+  border: none;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+.pad-top-bottom {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
