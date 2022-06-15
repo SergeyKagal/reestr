@@ -1,11 +1,12 @@
 .header {
-  background-color: aquamarine;
+  background-color: #ffffff;
 }
 .header__wrapper {
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #f9f9fb;
 
   a {
     display: flex;
