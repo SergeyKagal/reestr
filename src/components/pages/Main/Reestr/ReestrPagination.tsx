@@ -12,28 +12,30 @@ export const ReestrPagination = () => {
     <div className="pagination">
       <button className="button-32 left"></button>
       <button className="button-32 left-double"></button>
-      {pageNums.map((pageNum, index) => {
-        if (!index) {
-          return (
-            <button className="pagination-num-button current-num" key={pageNum} disabled={true}>
-              {pageNum}
-            </button>
-          );
-        }
-        if (index !== 5) {
-          return (
-            <button className="pagination-num-button" key={pageNum}>
-              {pageNum}
-            </button>
-          );
-        } else {
-          return (
-            <button className="pagination-num-button empty-button" key={pageNum} disabled={true}>
-              ...
-            </button>
-          );
-        }
-      })}
+      <div className="pages-num-wrapper">
+        {pageNums.map((pageNum, index) => {
+          if (!index) {
+            return (
+              <button className="pagination-num-button current-num" key={pageNum} disabled={true}>
+                {pageNum}
+              </button>
+            );
+          }
+          if (index !== 5) {
+            return (
+              <button className="pagination-num-button" key={pageNum}>
+                {pageNum}
+              </button>
+            );
+          } else {
+            return (
+              <button className="pagination-num-button empty-button" key={pageNum} disabled={true}>
+                ...
+              </button>
+            );
+          }
+        })}
+      </div>
 
       <button className="button-32 right-double"></button>
       <button className="button-32 right"></button>

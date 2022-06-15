@@ -71,8 +71,15 @@
   padding-top: 20px;
   font-size: 1.5em;
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
+  button {
+    display: block;
+  }
+  .pages-num-wrapper {
+    display: flex;
+  }
   .pagination-num-button {
     font-family: 'Manrope';
     font-weight: 500;

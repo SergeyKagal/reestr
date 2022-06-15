@@ -6,7 +6,7 @@ export const ReestrContent = () => {
       {reestrData.map((dataItem) => (
         <li className="reestr-data-row" key={dataItem.id}>
           <div className="registration-number pl-34">#{dataItem.id}</div>
-          <div className="softs-name">{dataItem.name}</div>
+          <div className="softs-name pl-34">{dataItem.name}</div>
           <div className="code-class">{dataItem.classCode}</div>
           <div className="softs-class">{dataItem.classSoft}</div>
           <div className="date-registration">{dataItem.registrationDate.toLocaleDateString()}</div>
