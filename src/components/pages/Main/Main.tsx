@@ -17,7 +17,6 @@ export const Main = () => {
       <Documents></Documents>
       <Faq></Faq>
       <Footer></Footer>
-      <p>Main</p>
     </>
   );
 };

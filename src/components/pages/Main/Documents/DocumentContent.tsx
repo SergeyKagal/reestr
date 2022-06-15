@@ -1,4 +1,3 @@
-import React from 'react';
 import { documents } from '../../../../constants/mocks/documents';
 
 export const DocumentContent = () => {
