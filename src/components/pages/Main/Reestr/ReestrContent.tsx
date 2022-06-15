@@ -5,7 +5,7 @@ export const ReestrContent = () => {
     <ul className="reestr-data-list">
       {reestrData.map((dataItem) => (
         <li className="reestr-data-row" key={dataItem.id}>
-          <div className="registration-number">#{dataItem.id}</div>
+          <div className="registration-number pl-34">#{dataItem.id}</div>
           <div className="softs-name">{dataItem.name}</div>
           <div className="code-class">{dataItem.classCode}</div>
           <div className="softs-class">{dataItem.classSoft}</div>

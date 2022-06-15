@@ -44,10 +44,13 @@
   display: flex;
   gap: 60px;
   padding: 20px 0;
-  align-items: flex-start;
+  align-items: center;
 }
 .registration-number {
   width: 188px;
+}
+.pl-34 {
+  padding-left: 34px;
 }
 .softs-name {
   width: 267px;
@@ -63,4 +66,44 @@
 }
 .softs-link {
   width: 77px;
+}
+.pagination {
+  padding-top: 20px;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .pagination-num-button {
+    font-family: 'Manrope';
+    font-weight: 500;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .current-num {
+    color: #ffffff;
+    background-color: #009cb4;
+    cursor: default;
+  }
+  .empty-button {
+    color: #4d4d4f;
+    cursor: default;
+  }
+  .right,
+  .left {
+    background-image: url('../../../../../public/assets/images//right-arrow.svg');
+    background-position: center;
+  }
+  .left {
+    transform: rotate(180deg);
+  }
+  .left-double,
+  .right-double {
+    background-image: url('../../../../../public/assets/images//double-arrow.svg');
+  }
+  .left-double {
+    transform: rotate(180deg);
+  }
 }

@@ -2,6 +2,7 @@ import './Reestr.scss';
 import { ReestrContent } from './ReestrContent';
 import { ReestrContentHeader } from './ReestrContentHeader';
 import { ReestrHeader } from './ReestrHeader';
+import { ReestrPagination } from './ReestrPagination';
 
 export const Reestr = () => {
   return (
@@ -10,6 +11,7 @@ export const Reestr = () => {
       <div className="reestr__content">
         <ReestrContentHeader />
         <ReestrContent />
+        <ReestrPagination />
       </div>
     </section>
   );
