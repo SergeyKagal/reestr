@@ -1,0 +1,85 @@
+.info__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info__right-side {
+  img {
+    width: 502px;
+    height: 502px;
+  }
+}
+.info__main-title {
+  font-size: 3em;
+  font-weight: 700;
+  color: #231f20;
+}
+.info__left-side {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  p {
+    font-size: 1.125em;
+    font-weight: 500;
+    color: #676a71;
+    span {
+      color: #009cb4;
+    }
+  }
+}
+.info__left-side-up {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info__description {
+  width: 404px;
+}
+.info__search-bar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  position: relative;
+  &::before {
+    content: ' ';
+    background: transparent;
+    width: 18px;
+    height: 18px;
+    background-image: url('../../../../../public/assets/images/search-ico.svg');
+
+    position: absolute;
+    top: 18px;
+    left: 10px;
+  }
+  input,
+  button {
+    font-size: 1.125em;
+    font-weight: 500;
+  }
+  button {
+    width: 120px;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #009cb4;
+    color: #ffffff;
+  }
+
+  input {
+    padding-left: 35px;
+    width: 330px;
+    border: none;
+    outline-style: none;
+    background-color: #ffffff;
+
+    &::placeholder {
+      color: #c6c6c6;
+    }
+    &:focus {
+      color: #676a71;
+    }
+  }
+}
