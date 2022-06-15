@@ -4,6 +4,7 @@ export interface INews {
   newsTitle: string;
   newsDate: Date;
   newsContent: string;
+  sourceUrl: string;
 }
 
 export const newsList: INews[] = [
@@ -14,6 +15,7 @@ export const newsList: INews[] = [
     newsDate: new Date('05-30-2022'),
     newsContent:
       'В связи с проведением технических работ 30.05.2022 с 15:00 могут наблюдаться пер...',
+    sourceUrl: '/',
   },
   {
     id: 2,
@@ -21,6 +23,7 @@ export const newsList: INews[] = [
     newsTitle: 'Изменение справочника',
     newsDate: new Date('05-28-2022'),
     newsContent: 'Обращаем внимание, что с 28.05.2022 внесены изменения в справочник "Дей...',
+    sourceUrl: '/',
   },
   {
     id: 3,
@@ -29,6 +32,7 @@ export const newsList: INews[] = [
     newsDate: new Date('05-26-2022'),
     newsContent:
       'В связи с проведением технических работ 26.05.2022 с 15:00 могут наблюдаться пер...',
+    sourceUrl: '/',
   },
   {
     id: 4,
@@ -36,6 +40,7 @@ export const newsList: INews[] = [
     newsTitle: 'Лицензирование в Беларуси',
     newsDate: new Date('05-25-2022'),
     newsContent: 'Лицензирование затрагивает отдельные виды деятельности в Республике Беларус...',
+    sourceUrl: '/',
   },
   {
     id: 5,
@@ -43,6 +48,7 @@ export const newsList: INews[] = [
     newsTitle: 'Тестирование системы новостей Ед...',
     newsDate: new Date('05-20-2022'),
     newsContent: 'Тестирование системы новостей ЕРЛ.',
+    sourceUrl: '/',
   },
   {
     id: 6,
@@ -50,5 +56,6 @@ export const newsList: INews[] = [
     newsTitle: 'Обновление версии реестра ПО',
     newsDate: new Date('05-18-2022'),
     newsContent: 'В новой версии доступны новые функции, которые упрощают использование сервис...',
+    sourceUrl: '/',
   },
 ];

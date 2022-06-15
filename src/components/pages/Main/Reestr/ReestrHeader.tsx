@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ReestrHeader = () => {
   return (
-    <header className="reestr-header">
+    <header className="reestr__header">
       <h2 className="reestr__header-title">Реестры</h2>
       <div className="reestr__header-control">
         <button className="reestr-filter button-32"></button>
