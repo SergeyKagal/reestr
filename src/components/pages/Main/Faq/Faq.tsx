@@ -16,7 +16,7 @@ export const Faq = () => {
   };
 
   return (
-    <section className="faq faq__wrapper container pad-top-bottom">
+    <section className="faq faq__wrapper container pad-top-bottom" id="faq">
       <div className="faq__left-side">
         <h2 className="faq__title">Вопрос-ответ</h2>
       </div>

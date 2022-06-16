@@ -3,7 +3,7 @@ import { NewsList } from './NewsList';
 
 export const News = () => {
   return (
-    <section className="news__wrapper container pad-top-bottom">
+    <section className="news__wrapper container pad-top-bottom" id="news">
       <header className="news__header">
         <h2 className="news__header-title">Новости реестра</h2>
       </header>

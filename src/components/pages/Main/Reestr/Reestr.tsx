@@ -6,7 +6,7 @@ import { ReestrPagination } from './ReestrPagination';
 
 export const Reestr = () => {
   return (
-    <section className="reestr container reestr__wrapper pad-top-bottom">
+    <section className="reestr container reestr__wrapper pad-top-bottom" id="reestr">
       <ReestrHeader />
       <div className="reestr__content">
         <ReestrContentHeader />

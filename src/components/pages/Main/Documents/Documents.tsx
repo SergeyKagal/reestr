@@ -4,7 +4,7 @@ import { DocumentHeader } from './DocumentHeader';
 
 export const Documents = () => {
   return (
-    <section className="document container document__wrapper pad-top-bottom">
+    <section className="document container document__wrapper pad-top-bottom" id="docs">
       <DocumentHeader />
       <div className="document__content">
         <DocumentContentHeader />
