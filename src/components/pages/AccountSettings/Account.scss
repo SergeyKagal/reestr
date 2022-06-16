@@ -1,0 +1,116 @@
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.account__title {
+  font-weight: 700;
+  font-size: 2.25em;
+  color: #231f20;
+}
+.account__wrapper {
+  display: flex;
+  gap: 130px;
+}
+.account__nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.account__nav-list-item {
+  width: 270px;
+  height: 72px;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #676a71;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  border: 1px solid #ededf4;
+}
+.account__right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 73px;
+}
+.account__right-side-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  h3 {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+}
+.account__data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h4 {
+    font-weight: 700;
+    font-size: 1.125em;
+  }
+}
+.account__password-header {
+  margin-top: 73px;
+  margin-bottom: 20px;
+}
+.account__form-input-wrapper,
+.account__password {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  label {
+    color: #676a71;
+  }
+}
+.input-text {
+  padding: 0 18px 0 18px;
+  margin-top: 5px;
+  display: block;
+  width: 370px;
+  height: 56px;
+  background-color: #f6f6f9;
+  font-size: 1.125em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  &:focus {
+    color: #231f20;
+  }
+  &::placeholder {
+    color: #c6c6c6;
+  }
+  &::after {
+    content: ' ';
+    width: 24px;
+    height: 24px;
+    background-image: url('..//../../../public/assets/images/eye.svg');
+  }
+}
+.account-submit {
+  width: 270px;
+  height: 56px;
+  background-color: #009cb4;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.125em;
+  font-weight: 700;
+  margin-top: 73px;
+}
+.account__password {
+  label {
+    position: relative;
+    &::after {
+      content: ' ';
+      width: 24px;
+      height: 24px;
+      background-image: url('..//../../../public/assets/images/eye.svg');
+      position: absolute;
+      background-repeat: no-repeat;
+      right: 15px;
+      top: 48px;
+    }
+  }
+}
