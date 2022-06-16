@@ -11,6 +11,14 @@ export const Authorization = () => {
         <div className="authorization__wrapper">
           <h2 className="authorization__title">Авторизация</h2>
           <Form />
+          <div className="authorization__buttons">
+            <button>Авторизация с использованием ЕС ИФЮЛ</button>
+            <button>Авторизация с использованием МСИ</button>
+          </div>
+          <div className="unregistred">
+            <p>У вас нет аккаунта?</p>
+            <a href="/">Нажмите сюда чтобы создать</a>
+          </div>
         </div>
       </section>
       <Footer />

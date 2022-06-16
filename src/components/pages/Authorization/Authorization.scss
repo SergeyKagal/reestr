@@ -2,6 +2,9 @@
   margin-left: auto;
   margin-right: auto;
   width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .authorization__title {
   text-align: center;
@@ -55,4 +58,37 @@
   border-radius: 5px;
   font-size: 1.125em;
   font-weight: 700;
+}
+
+.authorization__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  button {
+    width: 100%;
+    height: 56px;
+    border: 1px solid #ededf4;
+    border-radius: 5px;
+    font-size: 0.875em;
+    color: #4d4d4f;
+    font-weight: 500;
+    text-decoration: underline;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      background-color: #efeff0;
+    }
+  }
+}
+.unregistred {
+  margin-left: auto;
+  margin-right: auto;
+  width: 246px;
+  height: 48px;
+  text-align: center;
+  font-weight: 500;
+  a {
+    color: #009cb4;
+  }
 }
