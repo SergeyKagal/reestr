@@ -1,9 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { PATH } from '../../constants/pathes';
+import { useAppSelector } from '../../hook';
 import './Header.scss';
 
 export const Header = () => {
+  const { currentUser, notifyNumber } = useAppSelector((state) => state.app);
   return (
     <header className="header">
       <div className="header__wrapper container">
@@ -19,12 +20,12 @@ export const Header = () => {
           <div className="tools">
             <button className="dates"></button>
             <button className="notification">
-              <p className="notification-number">4</p>
+              <p className="notification-number">{notifyNumber}</p>
             </button>
           </div>
           <div className="user">
             <img src="./assets/images/user-img.png" alt="user-avatar" />
-            <span className="user-name">Захар Палазник</span>
+            <span className="user-name">{currentUser}</span>
 
             <button className="account-open-button button-32"></button>
           </div>

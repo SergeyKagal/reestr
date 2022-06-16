@@ -1,6 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-const initialState = {};
+interface IState {
+  notifyNumber: number;
+  currentUser: string;
+  isUserLogin: boolean;
+}
+const initialState: IState = {
+  notifyNumber: 4,
+  currentUser: 'Захар Палазник',
+  isUserLogin: true,
+};
 
 const appSlice = createSlice({
   name: 'store',
