@@ -25,8 +25,19 @@
   color: #676a71;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 20px;
   border: 1px solid #ededf4;
+  cursor: pointer;
+  &:hover {
+    background-color: #f6f6f9;
+  }
+  span {
+    padding-left: 10px;
+  }
+}
+.active {
+  border: #009cb4 1px solid;
+  border-radius: 5px;
 }
 .account__right-side {
   display: flex;

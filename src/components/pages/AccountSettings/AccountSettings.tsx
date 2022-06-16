@@ -1,5 +1,12 @@
 import { Footer } from '../../Footer/Footer';
 import { Header } from '../../Header/Header';
+import { Bell } from '../../Icons/Bell';
+import { Down } from '../../Icons/Down';
+import { Exit } from '../../Icons/Exit';
+import { Meta } from '../../Icons/Meta';
+import { ReestrIco } from '../../Icons/ReesrIco';
+import { Security } from '../../Icons/Security';
+import { User } from '../../Icons/User';
 import './Account.scss';
 import { AccountForm } from './AccountForm';
 
@@ -12,13 +19,34 @@ export const AccountSettings = () => {
         <div className="account__wrapper">
           <nav className="account__nav">
             <ul className="account__nav-list">
-              <li className="account__nav-list-item">Мои данные</li>
-              <li className="account__nav-list-item">Уведомления</li>
-              <li className="account__nav-list-item">Реестры</li>
-              <li className="account__nav-list-item">Метаданные</li>
-              <li className="account__nav-list-item">Безопасность</li>
-              <li className="account__nav-list-item">Мои загрузки</li>
-              <li className="account__nav-list-item">Выход</li>
+              <li className="account__nav-list-item active">
+                <User color="#009cb4"></User>
+                <span style={{ color: '#009cb4' }}>Мои данные</span>
+              </li>
+              <li className="account__nav-list-item">
+                <Bell color="#676a71"></Bell>
+                <span>Уведомления</span>
+              </li>
+              <li className="account__nav-list-item">
+                <ReestrIco color="#676a71"></ReestrIco>
+                <span> Реестры</span>
+              </li>
+              <li className="account__nav-list-item">
+                <Meta color="#676a71"></Meta>
+                <span>Метаданные</span>
+              </li>
+              <li className="account__nav-list-item">
+                <Security color="#676a71"></Security>
+                <span>Безопасность</span>
+              </li>
+              <li className="account__nav-list-item">
+                <Down color="#676a71"></Down>
+                <span>Мои загрузки</span>
+              </li>
+              <li className="account__nav-list-item">
+                <Exit />
+                <span style={{ color: '#E0371F' }}>Выход</span>
+              </li>
             </ul>
           </nav>
           <div className="account__right-side">
