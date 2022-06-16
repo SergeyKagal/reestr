@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import { PATH } from '../../constants/pathes';
-import { useAppSelector } from '../../hook';
+import { useAppDispatch, useAppSelector } from '../../hook';
+import { showHideMenu } from '../../store/appSlice';
 import './Header.scss';
 
 export const Header = () => {
-  const { currentUser, notifyNumber } = useAppSelector((state) => state.app);
+  const { currentUser, notifyNumber, isHeaderMenuOpen } = useAppSelector((state) => state.app);
+  const dispatch = useAppDispatch();
+
   return (
     <header className="header">
       <div className="header__wrapper container">
@@ -27,7 +30,27 @@ export const Header = () => {
             <img src="./assets/images/user-img.png" alt="user-avatar" />
             <span className="user-name">{currentUser}</span>
 
-            <button className="account-open-button button-32"></button>
+            <button
+              className={
+                !isHeaderMenuOpen
+                  ? 'account-open-button button-32'
+                  : 'account-open-button button-32 menu-open'
+              }
+              onClick={() => dispatch(showHideMenu())}
+            ></button>
+            {isHeaderMenuOpen && (
+              <ul className="header__nav-menu">
+                <li>
+                  <Link to={PATH.AUTHORIZATION}>Авторизация</Link>
+                </li>
+                <li>
+                  <Link to={PATH.ACCOUNT_SETTINGS}>Личный кабинет</Link>
+                </li>
+                <li>
+                  <Link to={PATH.MAIN}>Главная страница</Link>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </div>

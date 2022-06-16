@@ -3,18 +3,24 @@ interface IState {
   notifyNumber: number;
   currentUser: string;
   isUserLogin: boolean;
+  isHeaderMenuOpen: boolean;
 }
 const initialState: IState = {
   notifyNumber: 4,
   currentUser: 'Захар Палазник',
   isUserLogin: true,
+  isHeaderMenuOpen: false,
 };
 
 const appSlice = createSlice({
   name: 'store',
   initialState,
-  reducers: {},
+  reducers: {
+    showHideMenu(state) {
+      state.isHeaderMenuOpen = !state.isHeaderMenuOpen;
+    },
+  },
 });
 
-// export const {} = todoSlice.actions;
+export const { showHideMenu } = appSlice.actions;
 export default appSlice.reducer;

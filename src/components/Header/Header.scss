@@ -100,3 +100,25 @@
 .account-open-button {
   background: url('../../../public/assets/images/arrow.svg');
 }
+.menu-open {
+  transform: rotate(180deg);
+}
+.header__nav-menu {
+  width: 150px;
+  position: absolute;
+  top: 70px;
+  right: 240px;
+  list-style: none;
+  color: #4d4d4f;
+  background-color: #fff;
+  border: #4d4d4f solid 1px;
+  li {
+    height: 30px;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      background-color: #c6c6c6;
+    }
+  }
+}
