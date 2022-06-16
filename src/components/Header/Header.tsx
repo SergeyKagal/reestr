@@ -40,13 +40,13 @@ export const Header = () => {
             ></button>
             {isHeaderMenuOpen && (
               <ul className="header__nav-menu">
-                <li>
+                <li onClick={() => dispatch(showHideMenu())}>
                   <Link to={PATH.AUTHORIZATION}>Авторизация</Link>
                 </li>
-                <li>
+                <li onClick={() => dispatch(showHideMenu())}>
                   <Link to={PATH.ACCOUNT_SETTINGS}>Личный кабинет</Link>
                 </li>
-                <li>
+                <li onClick={() => dispatch(showHideMenu())}>
                   <Link to={PATH.MAIN}>Главная страница</Link>
                 </li>
               </ul>
