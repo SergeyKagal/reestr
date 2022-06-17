@@ -1,49 +1,42 @@
 import React, { useState } from 'react';
 import { reestrLength } from '../../../../constants/mocks/reest-data-mock';
-import { decrementPage, incrementPage } from '../../../../utils/pages-switch';
+import { Pagination } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
 
-const pageNumsInitial = [0, 1, 2, 3, 4, 5, reestrLength - 1, reestrLength];
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Manrope',
+    fontWeightMedium: 700,
+    fontSize: 18,
+  },
+  palette: {
+    primary: {
+      light: '#757ce8',
+      main: '#009cb4',
+      dark: '#002884',
+      contrastText: '#fff',
+    },
+  },
+});
+const pageNumsInitial = reestrLength;
 
 export const ReestrPagination = () => {
-  const [pageNums, setPagenums] = useState<number[]>(pageNumsInitial);
+  const [pageNum, setPagenum] = useState(1);
 
   return (
     <div className="pagination">
-      <button
-        className="button-32 left"
-        onClick={() => decrementPage(pageNums, setPagenums)}
-      ></button>
-      <button className="button-32 left-double"></button>
-      <div className="pages-num-wrapper">
-        {pageNums.map((pageNum, index) => {
-          if (!index) {
-            return (
-              <button className="pagination-num-button current-num" key={pageNum} disabled={true}>
-                {pageNum + 1}
-              </button>
-            );
-          }
-          if (index !== 5) {
-            return (
-              <button className="pagination-num-button" key={pageNum}>
-                {pageNum + 1}
-              </button>
-            );
-          } else {
-            return (
-              <button className="pagination-num-button empty-button" key={pageNum} disabled={true}>
-                ...
-              </button>
-            );
-          }
-        })}
-      </div>
-
-      <button className="button-32 right-double"></button>
-      <button
-        className="button-32 right"
-        onClick={() => incrementPage(pageNums, setPagenums)}
-      ></button>
+      <ThemeProvider theme={theme}>
+        <Pagination
+          count={pageNumsInitial}
+          shape="rounded"
+          color="primary"
+          showFirstButton
+          showLastButton
+          page={pageNum}
+          onChange={(_, num) => setPagenum(num)}
+        ></Pagination>
+      </ThemeProvider>
     </div>
   );
 };
