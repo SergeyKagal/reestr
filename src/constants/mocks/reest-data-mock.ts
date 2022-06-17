@@ -100,5 +100,3 @@ export const reestrData: IDataItem[] = [
     urlLink: '/',
   },
 ];
-
-export const reestrLength = 112;

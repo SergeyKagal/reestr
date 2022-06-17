@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { reestrLength } from '../../../../constants/mocks/reest-data-mock';
 import { Pagination } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { useAppDispatch, useAppSelector } from '../../../../hook';
+import { setCurrentReestrPage } from '../../../../store/appSlice';
 
 const theme = createTheme({
   typography: {
@@ -19,22 +19,23 @@ const theme = createTheme({
     },
   },
 });
-const pageNumsInitial = reestrLength;
 
 export const ReestrPagination = () => {
-  const [pageNum, setPagenum] = useState(1);
-
+  const dispatch = useAppDispatch();
+  const { currentReestrPagenum, reestrPagesQty } = useAppSelector((state) => state.app);
   return (
     <div className="pagination">
       <ThemeProvider theme={theme}>
         <Pagination
-          count={pageNumsInitial}
+          count={reestrPagesQty}
           shape="rounded"
           color="primary"
           showFirstButton
           showLastButton
-          page={pageNum}
-          onChange={(_, num) => setPagenum(num)}
+          page={currentReestrPagenum}
+          onChange={(_, num) => {
+            dispatch(setCurrentReestrPage(num));
+          }}
         ></Pagination>
       </ThemeProvider>
     </div>
