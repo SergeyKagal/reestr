@@ -115,10 +115,15 @@
   li {
     height: 30px;
   }
-  a {
+  a,
+  button {
     text-decoration: none;
     &:hover {
       background-color: #c6c6c6;
     }
+  }
+  button {
+    border: none;
+    font-size: 0.875em;
   }
 }

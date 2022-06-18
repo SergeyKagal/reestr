@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { PATH } from '../../constants/pathes';
 import { useAppDispatch, useAppSelector } from '../../hook';
-import { showHideMenu } from '../../store/appSlice';
+import { showHideMenu, userLogOut } from '../../store/appSlice';
+
 import './Header.scss';
 
 export const Header = () => {
   const { currentUser, notifyNumber, isHeaderMenuOpen } = useAppSelector((state) => state.app);
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   return (
@@ -27,8 +29,27 @@ export const Header = () => {
             </button>
           </div>
           <div className="user">
-            <img src="./assets/images/user-img.png" alt="user-avatar" />
-            <span className="user-name">{currentUser}</span>
+            {currentUser ? (
+              <>
+                {' '}
+                <img src={currentUser.imgUrl} alt="user-avatar" />
+                <span className="user-name">
+                  {currentUser?.firstName} {currentUser?.secondName}
+                </span>
+              </>
+            ) : (
+              <>
+                {' '}
+                <img src="./assets/images/unreg-user.png" alt="user-avatar" />
+                <span
+                  style={{ cursor: 'pointer' }}
+                  className="user-name"
+                  onClick={() => navigate(PATH.AUTHORIZATION)}
+                >
+                  Вход в аккаунт
+                </span>
+              </>
+            )}
 
             <button
               className={
@@ -41,14 +62,22 @@ export const Header = () => {
             {isHeaderMenuOpen && (
               <ul className="header__nav-menu">
                 <li onClick={() => dispatch(showHideMenu())}>
-                  <Link to={PATH.AUTHORIZATION}>Авторизация</Link>
+                  {!currentUser ? (
+                    <Link to={PATH.AUTHORIZATION}>Авторизация</Link>
+                  ) : (
+                    <button onClick={() => dispatch(userLogOut())}>Выход</button>
+                  )}
                 </li>
-                <li onClick={() => dispatch(showHideMenu())}>
-                  <Link to={PATH.ACCOUNT_SETTINGS}>Личный кабинет</Link>
-                </li>
-                <li onClick={() => dispatch(showHideMenu())}>
-                  <Link to={PATH.MAIN}>Главная страница</Link>
-                </li>
+                {currentUser && (
+                  <li onClick={() => dispatch(showHideMenu())}>
+                    <Link to={PATH.ACCOUNT_SETTINGS}>Личный кабинет</Link>
+                  </li>
+                )}
+                {currentUser && (
+                  <li onClick={() => dispatch(showHideMenu())}>
+                    <Link to={PATH.MAIN}>Главная страница</Link>
+                  </li>
+                )}
               </ul>
             )}
           </div>

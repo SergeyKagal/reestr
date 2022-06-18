@@ -1,7 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+type User = {
+  firstName: string;
+  secondName: string;
+  thirdName: string;
+  imgUrl: string;
+};
 interface IState {
   notifyNumber: number;
-  currentUser: string;
+  currentUser: User | undefined | null;
   isUserLogin: boolean;
   isHeaderMenuOpen: boolean;
   reestrPagesQty: number;
@@ -9,7 +16,12 @@ interface IState {
 }
 const initialState: IState = {
   notifyNumber: 4,
-  currentUser: 'Захар Палазник',
+  currentUser: {
+    firstName: 'Захар',
+    secondName: 'Палазник',
+    thirdName: 'Геннадьевич',
+    imgUrl: './assets/images/user-img.png',
+  },
   isUserLogin: true,
   isHeaderMenuOpen: false,
   reestrPagesQty: 58,
@@ -26,8 +38,19 @@ const appSlice = createSlice({
     setCurrentReestrPage(state, action: PayloadAction<number>) {
       state.currentReestrPagenum = action.payload;
     },
+    userLogOut(state) {
+      state.currentUser = null;
+    },
+    userLogIn(state) {
+      state.currentUser = {
+        firstName: 'Захар',
+        secondName: 'Палазник',
+        thirdName: 'Геннадьевич',
+        imgUrl: './assets/images/user-img.png',
+      };
+    },
   },
 });
 
-export const { showHideMenu, setCurrentReestrPage } = appSlice.actions;
+export const { showHideMenu, setCurrentReestrPage, userLogOut, userLogIn } = appSlice.actions;
 export default appSlice.reducer;
